@@ -14,7 +14,7 @@ namespace QuickBuy.Dominio.Entidades
 
         public int Quantidade { get; set; }
 
-        public override void Valido()
+        public override void Validado()
         {
             throw new NotImplementedException();
         }

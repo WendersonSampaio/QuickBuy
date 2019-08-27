@@ -14,9 +14,18 @@ namespace QuickBuy.Dominio.Entidades
 
         public decimal Preco { get; set; }
 
-        public override void Valido()
+        public override void Validado()
         {
-            throw new NotImplementedException();
+            LimparMensagensValidacao();
+
+            if (string.IsNullOrEmpty(Nome))
+                AdicionarCritica("Crítica: Nome do produto não informado");
+
+            if (string.IsNullOrEmpty(Descricao))
+                AdicionarCritica("Crítica: Descrição do produto não informada");
+
+            if (Preco <= 0)
+                AdicionarCritica("Preço do produto deve ser maior que zero (0)");
         }
     }
 }

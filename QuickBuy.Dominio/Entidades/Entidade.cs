@@ -13,9 +13,9 @@ namespace QuickBuy.Dominio.Entidades
             get { return mensagensValidacao ?? (mensagensValidacao = new List<string>()); }
         }
 
-        public abstract void Valido();
+        public abstract void Validado();
 
-        protected bool EhValido
+        protected bool Valido
         {
             get { return !mensagemValidação.Any(); }
         }

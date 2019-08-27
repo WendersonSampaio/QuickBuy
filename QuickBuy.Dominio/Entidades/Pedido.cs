@@ -31,7 +31,7 @@ namespace QuickBuy.Dominio.Entidades
         /// </summary>
         public ICollection<ItemPedido> ItensPedido { get; set; }
 
-        public override void Valido()
+        public override void Validado()
         {
             LimparMensagensValidacao();
 

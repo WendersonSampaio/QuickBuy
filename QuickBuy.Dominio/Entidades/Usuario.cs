@@ -22,9 +22,15 @@ namespace QuickBuy.Dominio.Entidades
         /// </summary>
         public ICollection<Pedido> Pedidos { get; set; }
 
-        public override void Valido()
+        public override void Validado()
         {
-            throw new NotImplementedException();
+            LimparMensagensValidacao();
+
+            if (string.IsNullOrEmpty(Email))
+                AdicionarCritica("Crítica: Email é obrigatório  ");
+
+            if (string.IsNullOrEmpty(Senha))
+                AdicionarCritica("Crítica: Senha não foi informada");
         }
     }
 }

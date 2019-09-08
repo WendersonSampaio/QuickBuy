@@ -9,7 +9,8 @@ namespace QuickBuy.Dominio.Enumerados
         NaoDefinido = 0,
         Boleto = 1,
         CartaoCredito = 2,
-        CartaoDebito = 3
+        CartaoDebito = 3,
+        Depósito = 4
 
     }
 }

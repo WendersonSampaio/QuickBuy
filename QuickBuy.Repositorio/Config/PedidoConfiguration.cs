@@ -39,7 +39,7 @@ namespace QuickBuy.Repositorio.Config
                 .IsRequired()
                 .HasMaxLength(9);
 
-
+            builder.HasOne(p => p.FormaPagamento);
         }
     }
 }
